@@ -1,5 +1,6 @@
 import Archetype, { Mage } from './Archetypes';
 import Energy from './Energy';
+import { SimpleFighter } from './Fighter';
 import Race, { Elf } from './Races';
 import getRandomInt from './utils';
 
@@ -65,7 +66,7 @@ class Character {
     return this._lifePoints;
   }
 
-  public attack(enemy: Character): void {
+  public attack(enemy: SimpleFighter): void {
     enemy.receiveDamage(this.strength);
   }
 
